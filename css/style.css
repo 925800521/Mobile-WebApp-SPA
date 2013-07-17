@@ -1,0 +1,181 @@
+/* ADAPTATIVE MOBILE STYLE */
+*{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+			
+	font-family: Helvetica, Arial, sans-serif;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+	-webkit-user-select: none;
+	-webkit-touch-callout: none;
+	-moz-tap-highlight-color:rgba(0,0,0,0);
+	-moz-user-select: none;
+	-moz-touch-callout: none;
+}
+
+input, textarea { -webkit-user-select: auto !important; }
+a{ text-decoration: none; }
+    
+/* BASE STYLE */
+html, body {width: 100%; height: 100%; font-size: 100%; overflow: hidden;}
+
+/* HEADER */
+header{ width: 100%; height: 48px; position:relative; z-index: 10; box-shadow: 0px 2px 5px rgba(0,0,0,0.2); background-color:white; }
+.hbutton{width:48px; height: 48px;}
+.hbutton.left{ float: left; }
+.hbutton.right{ float: right; }
+.search-button{background-image: url(../img/upperbar/search-icon.png); background-size: 100% auto;}
+.search-button:active{background-image: url(../img/upperbar/search-icon-active.png);}
+.back-button{background-image: url(../img/upperbar/back-icon.png); background-size: 100% auto;}
+.back-button:active{background-image: url(../img/upperbar/back-icon-active.png);}
+
+/* SEARCH BAR */
+.search-bar{width:100%; height:48px; background-color: white; position:absolute; top:0; left: 0; z-index:20;
+    -webkit-transform: translate(0, -100%);
+    -moz-transform: translate(0, -100%);
+    -ms-transform: translate(0, -100%);
+    -o-transform: translate(0, -100%);
+    transform: translate(0, -100%);
+    -webkit-transform: translate3d(0, -100%, 0);
+    -moz-transform: translate3d(0, -100%, 0);
+    -ms-transform: translate3d(0, -100%, 0);
+    -o-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+}
+.search-bar.visible{
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.search-input{ width: 55%; height: 36px; margin: 6px; border: none; border-radius: 999px 0 0 999px; background-color: #eeeeee; color: #666666; font-size: 1rem; padding: 0 16px; border: 1px solid #b4b4b4;}
+.search-input:focus{outline: none;}
+.search-option{width: 36px; line-height: 36px;display: inline-block;vertical-align: middle; margin: 0 2px; color: white; text-align: center; cursor:pointer;}
+.dsearch{background-color: rgb(0,200,255);}
+.ssearch{background-color: rgb(255,200,0);}
+.asearch{background-color: rgb(255,0,150);}
+
+/* HOME VIEW */
+.word-day-content{width: 100%; padding: 40px 16px;}
+.word-day{position: relative; text-align: center; width: 100%; line-height: 66px; line-height: 4rem; border: 1px dashed #888888; font-size: 14pt; font-size: 1.2rem; color: #252525; text-transform:capitalize;}
+.word-day::after{content:'Palabra del día'; position:absolute; top: -0.75rem; left: 20%; right: 20%; font-size: 18px; font-size: 1.5rem; line-height: 18px; line-height: 1.5rem; color: #888888; background-color: #eeeeee; text-transform:none; }
+.home-link{
+    display: block;
+    height: 48px;
+    color: white;
+    width: 100%;
+    padding-left: 16px;
+    line-height: 48px;
+    background-color: rgb(255, 200, 0);
+    margin-top: 8px;
+    font-size: 14pt;
+    font-size: 1.2rem;
+}
+
+/* WORD VIEW */
+.section-nav{ width: 100%; height: 56px; color: white; background-color: #eeeeee; overflow: hidden;}
+	.section-nav .nav-element{float: left; height: 48px; line-height: 48px; font-size: 14pt; font-size: 1.2rem; overflow: hidden; padding: 0 16px;
+        -webkit-transform: translate3d(0,0,0);
+		-webkit-transition: width 0.3s ease;
+		-moz-transition: width 0.3s ease;
+		-ms-transition: width 0.3s ease;
+		transition: width 0.3s ease;
+		
+	}
+	#nav-definicion{background-color: rgb(0, 200, 255);}
+	#nav-sinonimos{background-color: rgb(255, 200, 0); margin: 0 2%;}
+	#nav-antonimos{background-color: rgb(255, 0, 150);}
+	
+		.nav-element-inactive{ width: 18%; text-align:center; }
+		.nav-element-active{ width: 60%; }
+    #nav-definicion.nav-element-active::after{ content:'DEFINICION';}
+    #nav-sinonimos.nav-element-active::after{ content:'SINONIMOS';}
+    #nav-antonimos.nav-element-active::after{ content:'ANTONIMOS';}
+
+    #nav-definicion.nav-element-inactive::after{ content:'D';}
+    #nav-sinonimos.nav-element-inactive::after{ content:'S';}
+    #nav-antonimos.nav-element-inactive::after{ content:'A';}
+
+/* WORD SECTION */
+.word-info-section{
+    position: absolute;
+    top: 104px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 16px;
+    background-color: #eeeeee;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.word-info-section h1{ font-size: 20pt; font-size: 1.6rem; font-weight: bold; text-transform: capitalize; color: #252525;}
+.word-info-section h2{ font-size: 14pt; font-size: 1.2rem; font-weight: normal; padding-top: 8px; color: #666666;}
+    .info-title{ margin: 40px 0 8px; font-size: 14pt; font-size: 1.2rem; font-weight: bold; }
+    .info-title.dtitle{color: rgb(0, 200, 255); }
+    .info-title.stitle{color: rgb(255, 200, 0); }
+    .info-title.atitle{color: rgb(255, 0, 150); }
+.dlist {list-style-position: inside !important; list-style: decimal;}
+.dlist li{padding: 8px 0; font-size: 12pt; font-size: 1rem;}
+.slist {list-style: none;}
+.slist li{padding: 8px 0; font-size: 16pt; font-size: 1.3rem;}
+.alist {list-style: none;}
+.alist li{padding: 8px 0; font-size: 16pt; font-size: 1.3rem;}
+
+.word-info-section a{display: inline-block; width: 40px; width: 2.5rem; height: 40px; height: 2.5rem; margin-right: 8px; vertical-align: middle;}
+.dlink { background-color: rgb(0, 200, 255);}
+.slink { background-color: rgb(255, 200, 0);}
+.alink { background-color: rgb(255, 0, 150);}
+
+/* PAGES STYLE */
+.page{ position:absolute; top:0; left:0; width: 100%; height:100%; background-color: #eeeeee; -webkit-backface-visibility: hidden;}
+ 
+.central-page {
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+ 
+.left-page {
+    -webkit-transform: translate(-100%, 0);
+    -moz-transform: translate(-100%, 0);
+    -ms-transform: translate(-100%, 0);
+    transform: translate(-100%, 0);
+    -webkit-transform: translate3d(-100%, 0, 0);
+    -moz-transform: translate3d(-100%, 0, 0);
+    -ms-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+}
+ 
+.right-page {
+    -webkit-transform: translate(100%, 0);
+    -moz-transform: translate(100%, 0);
+    -ms-transform: translate(100%, 0);
+    transform: translate(100%, 0);
+    -webkit-transform: translate3d(100%, 0, 0);
+    -moz-transform: translate3d(100%, 0, 0);
+    -ms-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+}
+ 
+.transition {
+    -webkit-transition: 0.25s ease;
+    -moz-transition: 0.25s ease;
+    -ms-transition: 0.25s ease;
+    -o-transition: 0.25s ease;
+}
